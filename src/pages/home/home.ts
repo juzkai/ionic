@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController, Slides } from 'ionic-angular';
+import { NavController, ActionSheetController, Slides,AlertController } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 
 @Component({
@@ -15,19 +15,45 @@ export class HomePage {
     this.slides.autoplayDisableOnInteraction = false;
   }
 
-  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController) {
+  constructor(
+    public navCtrl: NavController, 
+    public actionSheetCtrl: ActionSheetController,
+    public alertCtrl:AlertController
+  ) {
 
   }
-
+  alertMsg = (msg)=>{
+    let alert = this.alertCtrl.create({
+      title: 'Confirm purchase',
+      message: msg,
+      buttons: [
+        {
+          text: '取消',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确认',
+          handler: () => {
+            console.log('Buy clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
   open = () => {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album',
+      title: 'ionicApp',
       buttons: [
         {
           text: 'Destructive',
           role: 'destructive',
           handler: () => {
             console.log('Destructive clicked');
+            this.alertMsg('Destructive clicked');
           }
         },
         {
