@@ -14,7 +14,13 @@ export class HomePage {
     this.slides.loop = true;
     this.slides.autoplayDisableOnInteraction = false;
   }
-
+  //解决切换其他页面回去轮播图不动问题
+  ionViewWillEnter(){
+    this.slides.startAutoplay();
+  }
+  ionViewWillLeave(){
+    this.slides.stopAutoplay();
+  }
   constructor(
     public navCtrl: NavController, 
     public actionSheetCtrl: ActionSheetController,
