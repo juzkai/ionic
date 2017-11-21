@@ -3,9 +3,9 @@
 
 ##依赖
 ------------
-node V8.9.0
+node V8.9.0   npm 5.5.1
 
 ##Get Start
 ------------
-需要执行npm install
+需要执行npm install</br>
 运行项目  ionic serve
