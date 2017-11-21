@@ -1,11 +1,12 @@
-# ionic
+ionic
+------------
 基于V3.18.0的ionic app练手踩坑之路
 
-##依赖
+依赖
 ------------
 node V8.9.0   npm 5.5.1
 
-##Get Start
+Get Start
 ------------
 需要执行npm install</br>
 运行项目  ionic serve
