@@ -1,17 +1,31 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      我的
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="../../assets/imgs/user.jpg">
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
+  
+  <ion-row no-padding text-center >
+    <ion-col no-padding col-4 *ngFor="let item of items">{{item}}</ion-col>
+  </ion-row>
+
+
+  <ion-card>
+    <ion-card-header>
+      {{bodyWidth}}
+    </ion-card-header>
+    <ion-card-content>
+      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -1,9 +1,11 @@
+
+$app-width:$app-width;
 page-home {
     .home-slide{
         background-color: #fe6400;
-        color: #fff;
+        color: color($colors,light);
     }
     .swiper1{
-        height: 200px;
+        height: $app-width;
     }
 }
