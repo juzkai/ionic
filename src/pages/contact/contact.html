@@ -15,11 +15,9 @@
     <p>November 5, 1955</p>
   </ion-item>
   
-  <ion-row no-padding text-center >
+  <ion-row no-padding text-center [setheight] >
     <ion-col no-padding col-4 *ngFor="let item of items">{{item}}</ion-col>
   </ion-row>
-
-
   <ion-card>
     <ion-card-header>
       {{bodyWidth}}
