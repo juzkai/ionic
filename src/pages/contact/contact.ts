@@ -7,11 +7,26 @@ import { NavController, } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+  private items=[
+    'a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a'
+  ];
+
+  private item =[
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'},
+    {img:"../../assets/imgs/item-unit.png",title:'item1'}
+  ]
   
   constructor(public navCtrl: NavController) {
     
   }
-  items=[11,22,33,44,55,66,77,88,99];
+  
   
   ionViewDidEnter(){
    

@@ -14,16 +14,21 @@
     <h2>Marty McFly</h2>
     <p>November 5, 1955</p>
   </ion-item>
-  
-  <ion-row no-padding text-center [setheight] >
-    <ion-col no-padding col-4 *ngFor="let item of items">{{item}}</ion-col>
-  </ion-row>
+
   <ion-card>
     <ion-card-header>
-      {{bodyWidth}}
+      ion-card
     </ion-card-header>
     <ion-card-content>
       The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
     </ion-card-content>
   </ion-card>
+  
+  <ion-row no-padding text-center class="unit"  [setheight]>
+    <ion-col col-4 class="item-unit" *ngFor="let item of item">
+        <img class="itemImg" src={{item.img}} />
+     <div>{{item.title}}</div>
+    </ion-col>
+  </ion-row>
+  
 </ion-content>

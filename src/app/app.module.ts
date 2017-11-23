@@ -23,7 +23,9 @@ import {SetHeightDirective } from './component/directive';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      mode: 'ios'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

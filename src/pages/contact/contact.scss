@@ -1,5 +1,15 @@
 page-contact {
-    .item-inner{
-        height:100 px;
+    .unit{
+        border-bottom: 0.55px solid #c8c7cc;
+        margin-top: 10px;
+    }
+    .item-unit{
+        border: 0.55px solid #c8c7cc;
+        padding: 10px;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+    .itemImg{
+        width: 70%;
     }
 }
