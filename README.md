@@ -9,6 +9,7 @@ node V8.9.0   npm V5.5.1
 Get Start
 ------------
 需要执行npm install</br>
+       npm install ionic </br>
 运行项目  ionic serve
 
 genymotion模拟器运行
