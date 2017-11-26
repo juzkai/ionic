@@ -26,7 +26,7 @@ export class HomePage {
     public actionSheetCtrl: ActionSheetController,
     public alertCtrl:AlertController
   ) {
-
+    this.slides
   }
   alertMsg = (msg)=>{
     let alert = this.alertCtrl.create({

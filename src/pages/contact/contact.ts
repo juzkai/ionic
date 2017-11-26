@@ -7,10 +7,9 @@ import { NavController, } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-  private items=[
-    'a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a'
-  ];
-
+  /**
+   *  功能菜单
+   */
   private item =[
     {img:"../../assets/imgs/item-unit.png",title:'item1'},
     {img:"../../assets/imgs/item-unit.png",title:'item1'},
