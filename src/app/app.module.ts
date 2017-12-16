@@ -10,8 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {SetHeightDirective } from './component/directive';
-
+import { DirectivesModule } from '../directives/directives.module';
 @NgModule({
   declarations: [
     MyApp,
@@ -19,10 +18,9 @@ import {SetHeightDirective } from './component/directive';
     ContactPage,
     HomePage,
     TabsPage,
-    SetHeightDirective
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,DirectivesModule,
     IonicModule.forRoot(MyApp,{
       mode: 'ios'
     })

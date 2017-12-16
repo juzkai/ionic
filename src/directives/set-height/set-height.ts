@@ -20,7 +20,7 @@ export class SetHeightDirective{
   }
   constructor(el:ElementRef){
       this.el = el.nativeElement;
-      this.setHeight(this._defaultMultiple);
+      this.setHeight(this._defaultMultiple);      
   }
 
   private setHeight(_multiple:number){
