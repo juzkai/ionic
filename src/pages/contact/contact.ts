@@ -10,7 +10,7 @@ export class ContactPage {
   /**
    *  功能菜单
    */
-  private item =[
+  static item =[
     {img:"../../assets/imgs/item-unit.png",title:'item1'},
     {img:"../../assets/imgs/item-unit.png",title:'item1'},
     {img:"../../assets/imgs/item-unit.png",title:'item1'},
