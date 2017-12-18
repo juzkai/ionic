@@ -1,11 +1,14 @@
 
-$app-width:$app-width;
+$slide-height:$slide-height;
 page-home {
     .home-slide{
         // background-color: #fe6400;
         color: color($colors,light);
     }
+    .home-slide img{
+        width: 100%;
+    }
     .swiper1{
-        height: $app-width;
+        height: $slide-height;
     }
 }

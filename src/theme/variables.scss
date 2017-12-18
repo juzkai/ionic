@@ -87,5 +87,7 @@ $colors: (
 @import "roboto";
 @import "noto-sans";
 
-//屏幕宽度
-$app-width:200px;
+//模块宽度、高度
+
+//焦点轮播图默认高度
+$slide-height:auto;
