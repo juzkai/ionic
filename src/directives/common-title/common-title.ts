@@ -28,7 +28,6 @@ export class CommonTitleDirective{
     constructor(el:ElementRef){
         this.el = el.nativeElement;
         this.setStyle();
-        console.log(this.el);
     }
     private setStyle(){
         this.el.style.width = '100%';
