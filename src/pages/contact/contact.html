@@ -23,12 +23,13 @@
       The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
     </ion-card-content>
   </ion-card>
-  
-  <ion-row no-padding text-center class="unit"  [setheight]>
-    <ion-col col-4 class="item-unit" *ngFor="let item of item">
+
+  <ion-grid no-padding>
+    <ion-row no-padding text-center class="unit">
+      <ion-col col-4 class="item-unit" *ngFor="let item of item">
         <img class="itemImg" src={{item.img}} />
-     <div>{{item.title}}</div>
-    </ion-col>
-  </ion-row>
-  
+        <span> {{item.title}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
