@@ -8,7 +8,6 @@ import { ViewChild } from '@angular/core';
 })
 export class HomePage {
   @ViewChild(Slides) slides: Slides;
-
   ngAfterViewInit() {
     this.slides.autoplay = 3000;
     this.slides.loop = true;
@@ -26,7 +25,7 @@ export class HomePage {
     public actionSheetCtrl: ActionSheetController,
     public alertCtrl:AlertController
   ) {
-    this.slides
+    
   }
   alertMsg = (msg)=>{
     let alert = this.alertCtrl.create({
@@ -81,4 +80,3 @@ export class HomePage {
     actionSheet.present();
   }
 }
-
