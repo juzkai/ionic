@@ -21,5 +21,7 @@ export class ItemPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemPage');
   }
-
+  back(){
+    this.navCtrl.pop();
+  }
 }

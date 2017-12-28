@@ -1,4 +1,3 @@
-import { ComponentsModule } from './../components/components.module';
 
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,10 +21,11 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
   // imports: 数组类型的选项,我们的模块需要依赖的一些其他的模块,这样做的目的使我们这个模块
   //          可以直接使用别的模块提供的一些指令,组件等等.
   imports: [
-    BrowserModule,DirectivesModule,ComponentsModule,HttpModule,
+    BrowserModule,DirectivesModule,HttpModule,
     TabsPageModule,
     IonicModule.forRoot(MyApp,{
       mode: 'ios',
+      tabsHideOnSubPages: 'true'         //隐藏全部子页面tabs
     })
   ],
   // exports: 数组类型的选项,我们这个模块需要导出的一些组件,指令,模块等;
