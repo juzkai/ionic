@@ -25,7 +25,8 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     TabsPageModule,
     IonicModule.forRoot(MyApp,{
       mode: 'ios',
-      tabsHideOnSubPages: 'true'         //隐藏全部子页面tabs
+      tabsHideOnSubPages: 'true',         //隐藏全部子页面tabs
+      backButtonText :'',  //返回按钮文本内容
     })
   ],
   // exports: 数组类型的选项,我们这个模块需要导出的一些组件,指令,模块等;
