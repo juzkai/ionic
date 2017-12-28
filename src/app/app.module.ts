@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';  // HttpServiceProvider 的依赖
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -12,6 +13,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DirectivesModule } from '../directives/directives.module';
 import { ComponentsModule } from '../components/components.module';
+import { HttpServiceProvider } from '../providers/http-service/http-service';
+
 @NgModule({
   // declarations: 数组类型的选项, 用来声明属于这个模块的指令,管道等等.
     //               然后我们就可以在这个模块中使用它们了.
@@ -25,7 +28,7 @@ import { ComponentsModule } from '../components/components.module';
   // imports: 数组类型的选项,我们的模块需要依赖的一些其他的模块,这样做的目的使我们这个模块
   //          可以直接使用别的模块提供的一些指令,组件等等.
   imports: [
-    BrowserModule,DirectivesModule,ComponentsModule,
+    BrowserModule,DirectivesModule,ComponentsModule,HttpModule,
     IonicModule.forRoot(MyApp,{
       mode: 'ios'
     })
@@ -50,6 +53,7 @@ import { ComponentsModule } from '../components/components.module';
   providers: [
     StatusBar,
     SplashScreen,
+    HttpServiceProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
   // schemas: 不属于Angular的组件或者指令的元素或者属性都需要在这里进行声明.

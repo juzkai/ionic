@@ -1,10 +1,16 @@
+import { APP_API } from './../../app/app.config';
+
 import { Component } from '@angular/core';
 import { NavController, ActionSheetController, Slides,AlertController } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
+import { HttpServiceProvider } from '../../providers/http-service/http-service';
+
+
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers:[HttpServiceProvider]
 })
 export class HomePage {
   @ViewChild(Slides) slides: Slides;
@@ -23,10 +29,11 @@ export class HomePage {
   constructor(
     public navCtrl: NavController, 
     public actionSheetCtrl: ActionSheetController,
-    public alertCtrl:AlertController
+    public alertCtrl:AlertController,
+    private httpServe : HttpServiceProvider
   ) {
-    
-  }
+    this.postData();
+  } 
   alertMsg = (msg)=>{
     let alert = this.alertCtrl.create({
       title: 'Confirm purchase',
@@ -79,4 +86,18 @@ export class HomePage {
 
     actionSheet.present();
   }
+
+  postData (){
+    const formData = {
+      id : 1
+    }
+   this.httpServe.post(APP_API.HttpTask,formData).then((response)=>{
+     console.log(response);
+     
+   }).catch((erroe)=>{
+      console.log(erroe);
+      
+   });
+  }
+
 }
