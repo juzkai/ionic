@@ -6,9 +6,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';  // HttpServiceProvider 的依赖
 import { TabsPageModule } from './../pages/tabs/tabs.module';
-import { HomePageModule } from './../pages/home/home.module';
-import { AboutPageModule } from './../pages/about/about.module';
-import { ContactPageModule } from './../pages/contact/contact.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
