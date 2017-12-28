@@ -1,18 +1,22 @@
-import { APP_API } from './../../app/app.config';
-
-import { Component } from '@angular/core';
-import { NavController, ActionSheetController, Slides,AlertController } from 'ionic-angular';
-import { ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController, ActionSheetController, Slides } from 'ionic-angular';
+import { APP_API } from '../../app/app.config';
 import { HttpServiceProvider } from '../../providers/http-service/http-service';
 
+/**
+ * Generated class for the HomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
-
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers:[HttpServiceProvider]
 })
 export class HomePage {
+
   @ViewChild(Slides) slides: Slides;
   ngAfterViewInit() {
     this.slides.autoplay = 3000;
@@ -20,21 +24,25 @@ export class HomePage {
     this.slides.autoplayDisableOnInteraction = false;
   }
   //解决切换其他页面回去轮播图不动问题
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.slides.startAutoplay();
   }
-  ionViewWillLeave(){
+  ionViewWillLeave() {
     this.slides.stopAutoplay();
   }
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+  }
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public actionSheetCtrl: ActionSheetController,
-    public alertCtrl:AlertController,
-    private httpServe : HttpServiceProvider
+    public alertCtrl: AlertController,
+    private httpServe: HttpServiceProvider
   ) {
     this.postData();
-  } 
-  alertMsg = (msg)=>{
+  }
+  //打开alert模态框
+  alertMsg = (msg) => {
     let alert = this.alertCtrl.create({
       title: 'Confirm purchase',
       message: msg,
@@ -56,6 +64,7 @@ export class HomePage {
     });
     alert.present();
   }
+  //打开actionsheet
   open = () => {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'ionicApp',
@@ -86,18 +95,22 @@ export class HomePage {
 
     actionSheet.present();
   }
-
-  postData (){
+  //接口请求
+  postData() {
     const formData = {
-      id : 1
+      id: 1
     }
-   this.httpServe.post(APP_API.HttpTask,formData).then((response)=>{
-     console.log(response);
-     
-   }).catch((erroe)=>{
+    this.httpServe.post(APP_API.HttpTask, formData).then((response) => {
+      console.log(response);
+
+    }).catch((erroe) => {
       console.log(erroe);
-      
-   });
+
+    });
+  }
+
+  toItem(){
+    this.navCtrl.push('ItemPage');
   }
 
 }

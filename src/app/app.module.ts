@@ -1,36 +1,33 @@
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';  // HttpServiceProvider 的依赖
-
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import { TabsPageModule } from './../pages/tabs/tabs.module';
+import { HomePageModule } from './../pages/home/home.module';
+import { AboutPageModule } from './../pages/about/about.module';
+import { ContactPageModule } from './../pages/contact/contact.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DirectivesModule } from '../directives/directives.module';
-import { ComponentsModule } from '../components/components.module';
 import { HttpServiceProvider } from '../providers/http-service/http-service';
+
+
 
 @NgModule({
   // declarations: 数组类型的选项, 用来声明属于这个模块的指令,管道等等.
     //               然后我们就可以在这个模块中使用它们了.
   declarations: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
+    MyApp
   ],
   // imports: 数组类型的选项,我们的模块需要依赖的一些其他的模块,这样做的目的使我们这个模块
   //          可以直接使用别的模块提供的一些指令,组件等等.
   imports: [
-    BrowserModule,DirectivesModule,ComponentsModule,HttpModule,
+    BrowserModule,DirectivesModule,HttpModule,TabsPageModule,AboutPageModule,HomePageModule,ContactPageModule,
     IonicModule.forRoot(MyApp,{
-      mode: 'ios'
+      mode: 'ios',
     })
   ],
   // exports: 数组类型的选项,我们这个模块需要导出的一些组件,指令,模块等;
@@ -42,11 +39,7 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
   // entryComponents: 数组类型的选项,指定一系列的组件,这些组件将会在这个模块定义的时候进行编译
   //                  Angular会为每一个组件创建一个ComponentFactory然后把它存储在ComponentFactoryResolver
   entryComponents: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    MyApp
   ],
   // providers: 这个选项是一个数组,需要我们列出我们这个模块的一些需要共用的服务
   //            然后我们就可以在这个模块的各个组件中通过依赖注入使用了.
