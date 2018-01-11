@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ActionSheetController, Slides } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, ActionSheetController, Slides } from 'ionic-angular';
 import { APP_API } from '../../app/app.config';
 import { HttpServiceProvider } from '../../providers/http-service/http-service';
 
