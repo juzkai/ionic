@@ -1,10 +1,10 @@
 /** @ju_zkai 
  *  全局变量设置
  */
+export const BASE_URL = '/HttpTask/';
+export const APP_SERVE_URL = 'http://localhost:8080' + BASE_URL;
 
-export const APP_SERVE_URL = 'http://localhost:8080/HttpTask/';
-
-export const APP_API ={
+export const APP_API = {
     HttpTask : APP_SERVE_URL + 'juzkai/user/getinfo'
 }
 
