@@ -9,6 +9,8 @@ export const APP_API = {
 }
 
 export class AppConfig {
+    //modal标题文字
+    static modalTitleText : string = '温馨提示';
     
     //获取设备高度
     public static getWindowHeight() {

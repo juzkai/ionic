@@ -57,7 +57,7 @@ export class HomePage {
         {
           text: '确认',
           handler: () => {
-            console.log('Buy clicked');
+            return false;
           }
         }
       ]

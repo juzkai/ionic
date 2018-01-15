@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DirectivesModule } from '../directives/directives.module';
 import { HttpServiceProvider } from '../providers/http-service/http-service';
+import { ModalServiceProvider } from '../providers/modal-service/modal-service';
 
 
 @NgModule({
@@ -45,8 +46,8 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
   providers: [
     StatusBar,
     SplashScreen,
-    HttpServiceProvider,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HttpServiceProvider,ModalServiceProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
   // schemas: 不属于Angular的组件或者指令的元素或者属性都需要在这里进行声明.
 
