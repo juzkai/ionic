@@ -28,6 +28,6 @@ export class ItemPage {
   }
   back(){
     // this.navCtrl.pop();
-    this.appModal.alertMsg('alert测试',() =>console.log('选择了确定'), () => console.log('选择了取消'));
+    this.appModal.confirmMsg('是否返回上一页',() =>this.navCtrl.pop(), () => console.log('选择了取消'));
   }
 }

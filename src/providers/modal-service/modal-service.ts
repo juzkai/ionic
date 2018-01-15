@@ -9,11 +9,15 @@ import { AppConfig } from '../../app/app.config';
 */
 @Injectable()
 export class ModalServiceProvider {
-  private modalTitle : string = AppConfig.modalTitleText;
-  constructor(public alertCtrl : AlertController) {
-    console.log('Hello ModalServiceProvider Provider');
-  }
-  alertMsg(opts, ok = () =>{return}, cancle = () =>{return}) {
+  public modalTitle : string = AppConfig.modalTitleText;
+  constructor(public alertCtrl : AlertController) {}
+  /**
+   * confirm 提示框
+   * @param opts string : 提示框内容 || obj { okBtnText : '确定按钮文字内容', cancleBtnText : '取消按钮文字内容', msg : '提示框文字' }
+   * @param ok function : 点击确定按钮返回事件
+   * @param cancle function : 点击取消按钮返回事件
+   */
+  confirmMsg(opts, ok = () =>{return}, cancle = () =>{return}) {
     let okBtnText = '确定';
     let cancleBtnText = '取消';
     let msg = '';
