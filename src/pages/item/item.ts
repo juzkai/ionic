@@ -1,4 +1,3 @@
-import { Router } from './../../app/app.router';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ModalServiceProvider } from '../../providers/modal-service/modal-service';
