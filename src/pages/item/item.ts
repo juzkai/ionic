@@ -1,7 +1,7 @@
+import { Router } from './../../app/app.router';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ModalServiceProvider } from '../../providers/modal-service/modal-service';
-
 /**
  * Generated class for the ItemPage page.
  *
@@ -9,7 +9,10 @@ import { ModalServiceProvider } from '../../providers/modal-service/modal-servic
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'ItemPage',
+  segment: 'items/:id/:name'
+})
 @Component({
   selector: 'page-item',
   templateUrl: 'item.html',
@@ -21,6 +24,9 @@ export class ItemPage {
     public navParams: NavParams,
     private appModal : ModalServiceProvider
   ) {
+    let id = navParams.get('id');
+    let name = navParams.get('name');
+    console.log('id:' + id + '-----name:' + name);
   }
 
   ionViewDidLoad() {

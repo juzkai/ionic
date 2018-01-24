@@ -10,7 +10,10 @@ import { HttpServiceProvider } from '../../providers/http-service/http-service';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'HomePage',
+  segment: 'home'
+})
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -110,7 +113,7 @@ export class HomePage {
   }
 
   toItem(){
-    this.navCtrl.push('ItemPage');
+    this.navCtrl.push('ItemPage',{id: 123,name: 'abc'});
   }
 
 }

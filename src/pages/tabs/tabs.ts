@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
-@IonicPage()
+@IonicPage({
+  name: 'TabsPage',
+  segment: '/'
+})
 @Component({
   templateUrl: 'tabs.html'
 })
